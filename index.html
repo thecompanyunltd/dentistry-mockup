@@ -178,6 +178,11 @@
             text-align: center;
             margin-bottom: 50px;
         }
+
+        .pi-section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
         
         .section-title h2 {
             color: var(--primary);
@@ -185,6 +190,18 @@
             margin-bottom: 15px;
         }
         
+        .pi-section-title h2 {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .pi-section-title p {
+            color: white;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
         .section-title p {
             color: var(--secondary);
             max-width: 700px;
@@ -625,7 +642,8 @@ select.form-control:focus {
 /* Patient Info Section Styles */
 .patient-info {
     padding: 80px 0;
-    background-color: var(--light);
+    background-color: #627a75;
+    
 }
 
 .info-grid {
@@ -657,12 +675,21 @@ select.form-control:focus {
     margin-bottom: 50px;
 }
 
+.pi-faq-section {
+    margin-bottom: 50px;
+}
+
 .faq-section h3 {
     color: var(--primary);
     margin-bottom: 20px;
     font-size: 24px;
 }
 
+.pi-faq-section h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
 .faq-item {
     margin-bottom: 15px;
     border: 1px solid #ddd;
@@ -710,6 +737,13 @@ select.form-control:focus {
     text-align: center;
 }
 
+.downloads-section p{
+    color: white;
+}
+
+.downloads-section h3{
+    color: white;
+}
 .download-buttons {
     display: flex;
     justify-content: center;
@@ -719,11 +753,11 @@ select.form-control:focus {
 
 .download-buttons .btn-outline {
     border-color: var(--primary);
-    color: var(--primary);
+    color: white;
 }
 
 .download-buttons .btn-outline:hover {
-    background-color: var(--primary);
+    background-color: white;
     color: var(--white);
 }
 
@@ -861,7 +895,7 @@ select.form-control:focus {
     <!-- Add this section where the patient-info anchor is -->
 <section class="patient-info" id="patient-info">
     <div class="container">
-        <div class="section-title">
+        <div class="pi-section-title">
             <h2>Patient Information</h2>
             <p>Everything you need to know before your visit</p>
         </div>
@@ -900,7 +934,7 @@ select.form-control:focus {
             </div>
         </div>
         
-        <div class="faq-section">
+        <div class="pi-faq-section">
             <h3>Frequently Asked Questions</h3>
             <div class="faq-item">
                 <button class="faq-question">What should I do if I have a dental emergency?</button>
