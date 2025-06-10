@@ -6,6 +6,28 @@
     <title>Dr. O'Callaghan Dental Care | Malmesbury, South Africa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+/* Force the Google Translate dropdown to be visible */
+.goog-te-gadget {
+    font-size: 16px !important;
+    color: var(--primary) !important;
+    background-color: transparent !important;
+    border: 1px solid var(--primary) !important;
+    border-radius: 4px !important;
+    padding: 5px 10px !important;
+    cursor: pointer !important;
+    font-family: Cascadia Code, monospace !important;
+    display: inline-block !important;
+}
+
+/* Hide the Google Translate toolbar */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
         /* Global Styles */
         :root {
             --primary: #0c2442;
@@ -764,9 +786,13 @@ select.form-control:focus {
 .download-buttons i {
     margin-right: 8px;
 }
+
     </style>
 </head>
 <body>
+    <!-- Google Translate Widget -->
+<div id="google_translate_element" class="language-switcher"></div>
+
     <!-- Header -->
     <header>
         <div class="container header-container">
@@ -774,8 +800,10 @@ select.form-control:focus {
                 <!-- Placeholder for logo - would be replaced with actual logo -->
                 <img src="logo.png" alt="Dr. O'Callaghan Dental Care Logo">
                 <div class="logo-text">
-                    <h1>Dr. O'Callaghan Dental Care</h1>
-                    <p>Quality Dental Services in Malmesbury</p>
+                    <!-- Example modifications -->
+                     <div id="google_translate_element"></div>
+<h1 data-translate="title">Dr. O'Callaghan Dental Care</h1>
+<p data-translate="tagline">Quality Dental Services in Malmesbury</p>
                 </div>
             </div>
             <nav id="main-nav">
@@ -976,7 +1004,7 @@ select.form-control:focus {
             </div>
             <div class="testimonial-slider">
                 <div class="testimonial">
-                    <p class="testimonial-text">"Dr. O'Callaghan and her team are simply amazing. They made me feel comfortable throughout my treatment and the results were perfect. I highly recommend them!"</p>
+                    <p class="testimonial-text">"Dr. O'Callaghan and his team are simply amazing. They made me feel comfortable throughout my treatment and the results were perfect. I highly recommend them!"</p>
                     <div class="testimonial-author">
                         <div class="author-image">
                             <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah J.">
@@ -1130,6 +1158,13 @@ select.form-control:focus {
     </footer>
 
     <script>
+        function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,af',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu');
         const mainNav = document.getElementById('main-nav');
@@ -1182,5 +1217,17 @@ faqQuestions.forEach(question => {
     });
 });
     </script>
+
+    <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,af',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
